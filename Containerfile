@@ -49,4 +49,4 @@ WORKDIR /app
 COPY --from=builder /src/build/xmrig /app/xmrig
 
 # Set the entrypoint so the container acts exactly like the executable
-ENTRYPOINT ["./xmrig"]
+ENTRYPOINT ["./xmrig", " --config=./config_background_colored.json"]
