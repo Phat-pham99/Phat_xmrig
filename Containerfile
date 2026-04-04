@@ -45,8 +45,10 @@ RUN apt-get update && apt-get install -y \
 # Set the working directory
 WORKDIR /app
 
-# Copy the compiled binary from the "builder" stage
+# Copy the compiled, highly optimized binary from the "builder" stage
 COPY --from=builder /src/build/xmrig /app/xmrig
+# This line is very important
+COPY ./config_background_colored.json /app/config.json
 
 # Set the entrypoint so the container acts exactly like the executable
-ENTRYPOINT ["./xmrig", " --config=./config_background_colored.json"]
+ENTRYPOINT ["./xmrig","--config=./config.json"]
