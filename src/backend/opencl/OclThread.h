@@ -46,6 +46,7 @@ public:
     }
 
 #   ifdef XMRIG_ALGO_CN_GPU
+    // MoneroOcean: CN-GPU OpenCL threads do not use standard CN striding fields.
     OclThread(uint32_t index, uint32_t intensity, uint32_t worksize, uint32_t threads, uint32_t unrollFactor) :
         m_fields(0),
         m_threads(threads, -1),
@@ -57,6 +58,7 @@ public:
     {
         setIntensity(intensity);
     }
+    // End MoneroOcean
 #   endif
 
 #   ifdef XMRIG_ALGO_RANDOMX

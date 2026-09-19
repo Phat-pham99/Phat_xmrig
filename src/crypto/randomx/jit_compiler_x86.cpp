@@ -352,11 +352,13 @@ namespace randomx {
 		generateProgramPrologue(prog, pcfg);
 
 		if (RandomX_CurrentConfig.Tweak_V2_PREFETCH) {
-			emit(codeReadDatasetV2, readDatasetV2Size, code, codePos);
+			// MoneroOcean: use runtime-patched dataset read code for fork dataset masks.
+			emit(RandomX_CurrentConfig.codeReadDatasetV2Tweaked, RandomX_CurrentConfig.codeReadDatasetV2TweakedSize, code, codePos);
 		}
 		else {
-			emit(codeReadDataset, readDatasetSize, code, codePos);
+			emit(RandomX_CurrentConfig.codeReadDatasetTweaked, RandomX_CurrentConfig.codeReadDatasetTweakedSize, code, codePos);
 		}
+		// End MoneroOcean
 
 		generateProgramEpilogue(prog, pcfg);
 	}

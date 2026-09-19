@@ -147,6 +147,7 @@ void xmrig::Pools::load(const IJsonReader &reader)
         return;
     }
 
+    // MoneroOcean: first MoneroOcean pool disables the built-in donation path.
     bool mo = false;
     for (const rapidjson::Value &value : pools.GetArray()) {
         if (!value.IsObject()) {
@@ -161,6 +162,7 @@ void xmrig::Pools::load(const IJsonReader &reader)
     }
 
     if (mo) m_donateLevel = 0; else
+    // End MoneroOcean
     setDonateLevel(reader.getInt(kDonateLevel, kDefaultDonateLevel));
     setProxyDonate(reader.getInt(kDonateOverProxy, PROXY_DONATE_AUTO));
     setRetries(reader.getInt(kRetries));

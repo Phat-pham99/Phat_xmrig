@@ -59,7 +59,9 @@ public:
 #   endif
 
 #   ifdef XMRIG_FEATURE_MO_BENCHMARK
+    // MoneroOcean: log tag used by algo-perf benchmark reporting.
     static const char *benchmark();
+    // End MoneroOcean
 #   endif
 
 #   ifdef XMRIG_FEATURE_PROFILING
